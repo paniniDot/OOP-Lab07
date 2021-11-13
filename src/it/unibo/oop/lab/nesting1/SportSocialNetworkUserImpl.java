@@ -141,19 +141,35 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
         
     	private final String name;
     	
+    	/**
+    	 * Constructor for Sport class
+    	 *  
+    	 * @param name
+    	 * 		name of the sport
+    	 */   	
     	public Sport(final String name) {
     		this.name = name;
     	}
     	
+    	/**
+    	 * 
+    	 * @return the name of the sport
+    	 */
     	public String getName() {
     		return this.name;
     	}
     	
-		@Override
+		/**
+		 *  {@inheritDoc}
+		 */
+    	@Override
 		public int hashCode() {
 			return Objects.hash(name);
 		}
 
+    	/**
+		 *  {@inheritDoc}
+		 */
 		@Override
 		public boolean equals(Object obj) {
 			if (this == obj) {
