@@ -8,7 +8,7 @@ public enum Sport {
 	BASKET("Basket", 10, Place.INDOOR), VOLLEY("Volley", 12, Place.INDOOR), TENNIS("Tennis", 2, Place.OUTDOOR),
 	BIKE("Bike", 1, Place.OUTDOOR), F1("Formula 1", 1, Place.OUTDOOR), MOTOGP("Moto GP", 1, Place.OUTDOOR), SOCCER("Soccer", 11, Place.OUTDOOR);
      
-	private final static int INDIVIDUAL = 1; 
+	public final static int INDIVIDUAL = 1; 
 	
 	private final String name;
 	private final int nMembers;
