@@ -109,6 +109,16 @@ public final class TestAnonymousComparator {
         mrossi.addFollowedUser("economists", ntaleb);
         mrossi.addFollowedUser("actors i like", dwashington);
         final List<User> rossiUsers = mrossi.getFollowedUsers();
+        
+        Collections.sort(rossiUsers, new Comparator<User>() {
+
+			@Override
+			public int compare(User o1, User o2) {
+				return (o2.getAge() < o1.getAge()) ? -1 : ((o2.getAge() == o1.getAge()) ? 0 : 1);
+			}
+        	
+        });
+        
         /*
          * Order rossi's followed users by age in decreasing order:
          * 
