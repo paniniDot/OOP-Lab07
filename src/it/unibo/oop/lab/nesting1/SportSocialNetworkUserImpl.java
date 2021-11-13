@@ -128,12 +128,7 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      */
     // TODO
     public boolean hasSport(final Sport s) {
-        for (Sport sp : this.sports) {
-        	if (sp.equals(s)) {
-        		return true;
-        	}
-        }
-        return false;
+        return this.sports.contains(s);
     }
 
     /*
