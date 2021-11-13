@@ -67,14 +67,16 @@ public final class TestAnonymousComparator {
         dwashington.addFollowedUser("writers", ntaleb);
         final List<User> denzelUsers = dwashington.getFollowedUsers();
         
-        Collections.sort(denzelUsers, new Comparator<User>() {
+        final var userSort = new Comparator<User>() {
 
 			@Override
 			public int compare(User o1, User o2) {
-				return (o1.getAge() < o2.getAge()) ? -1 : ((o1.getAge() == o2.getAge()) ? 0 : 1);
+				return Integer.compare(o1.getAge(), o2.getAge());
 			}
         	
-        });
+        };
+        
+        Collections.sort(denzelUsers, userSort);
         
         /*
          * Order denzel's followed users incrementally by age:
@@ -110,14 +112,7 @@ public final class TestAnonymousComparator {
         mrossi.addFollowedUser("actors i like", dwashington);
         final List<User> rossiUsers = mrossi.getFollowedUsers();
         
-        Collections.sort(rossiUsers, new Comparator<User>() {
-
-			@Override
-			public int compare(User o1, User o2) {
-				return (o2.getAge() < o1.getAge()) ? -1 : ((o2.getAge() == o1.getAge()) ? 0 : 1);
-			}
-        	
-        });
+        Collections.sort(rossiUsers, userSort.reversed());
         
         /*
          * Order rossi's followed users by age in decreasing order:
