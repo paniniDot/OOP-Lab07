@@ -5,7 +5,7 @@ package it.unibo.oop.lab.enum2;
 
 public enum Sport {
 	
-	BASKET("Basket", 10, Place.INDOOR), VOLLEY("Volley", 12, Place.INDOOR), TENNIS("Tennis", 2, Place.OUTDOOR),
+	BASKET("Basket", 5, Place.INDOOR), VOLLEY("Volley", 6, Place.INDOOR), TENNIS("Tennis", 1, Place.OUTDOOR),
 	BIKE("Bike", 1, Place.OUTDOOR), F1("Formula 1", 1, Place.OUTDOOR), MOTOGP("Moto GP", 1, Place.OUTDOOR), SOCCER("Soccer", 11, Place.OUTDOOR);
      
 	public final static int INDIVIDUAL = 1; 
